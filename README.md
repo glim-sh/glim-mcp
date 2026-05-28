@@ -1,10 +1,10 @@
-# Glim MCP
+# glim-mcp
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 Hosted MCP server with data tools for AI agents.
 
-Glim runs a single remote MCP endpoint at `https://glim.sh/mcp`. It exposes tools for Twitter, Reddit, web search and crawl, GitHub, Amazon, YouTube subtitles, and LLM inference. Sign in and top up your balance at [glim.sh/app](https://glim.sh/app); your calls are billed against that balance.
+Glim runs a single remote MCP endpoint at `https://glim.sh/mcp`. It exposes tools for Twitter, Reddit, web search and crawl, GitHub, Amazon, and YouTube subtitles. Sign in and top up your balance at [glim.sh/app](https://glim.sh/app); your calls are billed against that balance.
 
 ## Install
 
