@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "sh.glim/mcp",
+  "description": "Hosted MCP server with data tools for AI agents: Twitter, Reddit, web search and crawl, GitHub, Amazon, YouTube subtitles, and LLM inference.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/glim-sh/glim-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://glim.sh",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://glim.sh/mcp"
+    }
+  ]
+}
