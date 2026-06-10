@@ -1,0 +1,5 @@
+# Smithery configuration: https://smithery.ai/docs/config#smitheryyaml
+# glim is a hosted remote server - nothing to build or run locally.
+startCommand:
+  type: streamable-http
+  url: https://glim.sh/mcp

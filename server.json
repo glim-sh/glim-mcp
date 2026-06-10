@@ -1,13 +1,18 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-  "name": "sh.glim/mcp",
-  "description": "Hosted MCP server with data tools for AI agents: Twitter, Reddit, web search and crawl, GitHub, Amazon, and YouTube subtitles.",
-  "version": "0.1.0",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "sh.glim/glim",
+  "title": "glim.sh",
+  "description": "Give your agent live data from Twitter, Reddit, the web and GitHub. No API keys, no scraping stack.",
+  "version": "1.0.0",
+  "websiteUrl": "https://glim.sh",
   "repository": {
     "url": "https://github.com/glim-sh/glim-mcp",
     "source": "github"
   },
-  "websiteUrl": "https://glim.sh",
+  "icons": [
+    { "src": "https://glim.sh/glim-mark.svg", "mimeType": "image/svg+xml", "sizes": ["any"] },
+    { "src": "https://glim.sh/icon-512.png", "mimeType": "image/png", "sizes": ["512x512"] }
+  ],
   "remotes": [
     {
       "type": "streamable-http",
