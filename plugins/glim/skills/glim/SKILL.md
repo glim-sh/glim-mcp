@@ -5,7 +5,7 @@ version: 1.0.0
 homepage: https://glim.sh
 metadata:
   openclaw:
-    emoji: "\U0001F30A"
+    emoji: "✨"
     homepage: https://glim.sh
     requires:
       bins: [npx]
