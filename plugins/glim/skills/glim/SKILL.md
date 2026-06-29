@@ -65,7 +65,7 @@ Fund the address shown by `wallet info` with USDC on Base or Solana. Tool calls 
 | `glim_twitter_get` | $0.005 | Tweet with thread context, or user profile, by URL/id/handle |
 | `glim_reddit_search` | $0.01 | Search Reddit posts |
 | `glim_reddit_get` | $0.015 | Post + comments, subreddit feed, or user activity |
-| `glim_web_search` | $0.01 | Semantic web search (Exa) |
+| `glim_web_search` | $0.01 | Semantic web search |
 | `glim_web_fetch` | $0.002 | Clean page extraction (handles SSR, SPA shells, PDFs) |
 | `glim_github_search` | $0.002 | Search GitHub repos, conversations, or code |
 | `glim_github_get` | $0.002 | Repo metadata, files, history, PRs, issues |

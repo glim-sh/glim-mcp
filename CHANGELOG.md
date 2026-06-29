@@ -15,11 +15,11 @@ A tools-focused release: richer responses, fewer follow-up calls, and more relia
 - **all tools:** absolute UTC timestamps with a relative hint (e.g. `2026-06-09 14:30Z (2d ago)`) on posts, tweets, and comments; GitHub repo created/last-pushed and issue/PR created/updated dates; Amazon list price plus discount (`was X, -Y%`) and Sponsored flags; web search relevance scores; web fetch title, author, and published date; YouTube canonical watch URL
 
 ### <!-- 2 -->🐛 Bug Fixes
-- **amazon:** classify not-found pages correctly instead of treating them as bot-blocks; recover from `.com` soft-blocks and cold-start timeouts; fix brand-only titles, false "Amazon's Choice" badges, stray markup leaking into fields, and an empty-result crash
+- **amazon:** classify genuinely not-found products correctly instead of retrying them as transient failures; recover gracefully from intermittent upstream blocks and slow first responses; fix brand-only titles, false "Amazon's Choice" badges, stray markup leaking into fields, and an empty-result crash
 - **github:** fix silent mis-parse traps and output gaps in `glim_github_get`; auto-recover empty code searches with concrete retry guidance
 - **reddit:** more consistent English-locale results
 - **web:** harden `glim_web_fetch` error paths
-- **payment:** return a retryable `402` instead of a `502` on client-fault settlement failures
+- **payment:** return a retryable `402` instead of a `502` when a payment can't be settled due to a client-side issue
 
 ### <!-- 3 -->🚀 Performance
 - **reddit:** comment threads and post hydration are dramatically faster (`glim_reddit_get` **~10s -> ~0.4s**), and fetched posts stay warm across requests
