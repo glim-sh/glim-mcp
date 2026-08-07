@@ -2,7 +2,7 @@
 
 ### Live data for any agent.
 
-One remote MCP endpoint gives your agent live data from Twitter/X, Reddit, the open web, GitHub, Amazon, and YouTube. No API keys, no scraping stack - connect the URL and pay per call.
+One remote MCP endpoint gives your agent live data from Twitter/X, Reddit, the open web, GitHub, Amazon, and YouTube, plus AI-text detection. No API keys, no scraping stack - connect the URL and pay per call.
 
 ```
 https://glim.sh/mcp
@@ -65,6 +65,7 @@ On first use the client runs a browser OAuth sign-in. Manage your balance at [gl
 | `glim_amazon_search` | $0.005 | Search Amazon listings with prices, ratings, ASINs |
 | `glim_amazon_get` | $0.01 | Amazon product detail by ASIN |
 | `glim_youtube_get` | $0.01 | YouTube subtitles/transcript by video id |
+| `glim_detect_ai` | from $0.06 | Score text for AI authorship, with a per-segment breakdown |
 
 Restrict the tool list per session with `?tools=`:
 

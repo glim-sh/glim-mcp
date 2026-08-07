@@ -1,7 +1,7 @@
 ---
 name: glim
-description: Live data for AI agents - Twitter/X search, Reddit posts and comments, semantic web search, clean page extraction, GitHub repos/code/PRs, Amazon products, YouTube transcripts. One hosted MCP server at glim.sh/mcp. Sign in with OAuth and a prepaid balance, or pay per call with crypto (x402 USDC on Base/Solana, MPP on Tempo). No API keys to provision.
-version: 1.0.0
+description: Live data for AI agents - Twitter/X search, Reddit posts and comments, semantic web search, clean page extraction, GitHub repos/code/PRs, Amazon products, YouTube transcripts, AI-text detection. One hosted MCP server at glim.sh/mcp. Sign in with OAuth and a prepaid balance, or pay per call with crypto (x402 USDC on Base/Solana, MPP on Tempo). No API keys to provision.
+version: 1.1.0
 homepage: https://glim.sh
 metadata:
   openclaw:
@@ -13,7 +13,7 @@ metadata:
 
 # Glim
 
-Glim is a hosted MCP server that gives agents live external data: Twitter/X, Reddit, web search and page extraction, GitHub, Amazon, and YouTube transcripts. One endpoint, eleven tools, pay per call. No API keys to provision or rotate.
+Glim is a hosted MCP server that gives agents live external data: Twitter/X, Reddit, web search and page extraction, GitHub, Amazon, YouTube transcripts, and AI-text detection. One endpoint, twelve tools, pay per call. No API keys to provision or rotate.
 
 If `glim_*` tools are already available in your session, skip to Tools and use them directly.
 
@@ -72,6 +72,7 @@ Fund the address shown by `wallet info` with USDC on Base or Solana. Tool calls 
 | `glim_amazon_search` | $0.005 | Search Amazon listings with prices, ratings, ASINs |
 | `glim_amazon_get` | $0.01 | Amazon product detail by ASIN |
 | `glim_youtube_get` | $0.01 | YouTube subtitles/transcript by video id |
+| `glim_detect_ai` | from $0.06 | Score text for AI authorship, with a per-segment breakdown |
 
 ## Usage patterns
 
@@ -80,6 +81,7 @@ Fund the address shown by `wallet info` with USDC on Base or Solana. Tool calls 
 - Twitter search supports advanced operators (`from:`, `since:`, `min_faves:`, ...). The server exposes a `docs://search-operators` MCP resource with the full reference.
 - Large `glim_web_fetch` pages are truncated inline with a `download_full_url` link to the complete extraction.
 - Per-tool pricing is also exposed as the `docs://pricing` MCP resource.
+- `glim_detect_ai` is priced by length: $0.06 per 1,000 words on `tier=standard`, per 100 words on `tier=premium` (rounded up, minimum $0.06). Use it to verify third-party content or to check a draft before publishing - revise flagged segments and re-check. Texts under ~100 words automatically run on the premium detector at the standard price.
 
 ## REST API
 
