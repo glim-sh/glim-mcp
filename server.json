@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "sh.glim/glim",
   "title": "glim.sh",
-  "description": "Give your agent live data from Twitter, Reddit, the web, GitHub, Amazon and YouTube, plus AI-text detection. No API keys, no scraping stack.",
-  "version": "1.2.0",
+  "description": "Give your agent live data from Twitter, Reddit, the web, GitHub, Amazon, YouTube and public Telegram channels, plus AI-text detection. No API keys, no scraping stack.",
+  "version": "1.3.0",
   "websiteUrl": "https://glim.sh",
   "repository": {
     "url": "https://github.com/glim-sh/glim-mcp",

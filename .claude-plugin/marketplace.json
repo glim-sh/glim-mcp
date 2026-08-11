@@ -4,16 +4,16 @@
     "name": "Glim",
     "email": "support@glim.sh"
   },
-  "description": "Live data for any agent - hosted MCP server for Twitter/X, Reddit, web search and extraction, GitHub, Amazon, and YouTube.",
+  "description": "Live data for any agent - hosted MCP server for Twitter/X, Reddit, web search and extraction, GitHub, Amazon, YouTube, and public Telegram channels.",
   "plugins": [
     {
       "name": "glim",
       "source": "./plugins/glim",
-      "description": "Connects the glim.sh MCP server (live Twitter/X, Reddit, web, GitHub, Amazon, YouTube data) and bundles a usage skill with tool prices and query patterns.",
+      "description": "Connects the glim.sh MCP server (live Twitter/X, Reddit, web, GitHub, Amazon, YouTube, Telegram data) and bundles a usage skill with tool prices and query patterns.",
       "homepage": "https://glim.sh",
       "repository": "https://github.com/glim-sh/glim-mcp",
       "license": "MIT",
-      "keywords": ["data", "search", "twitter", "reddit", "github", "web", "youtube", "amazon", "research"],
+      "keywords": ["data", "search", "twitter", "reddit", "github", "web", "youtube", "amazon", "telegram", "research"],
       "category": "search"
     }
   ]

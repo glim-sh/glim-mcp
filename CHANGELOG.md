@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/glim-sh/glim-mcp/compare/v1.2.0...v1.3.0) - 2026-08-11
+
+### <!-- 1 -->🎉 New Features
+- **telegram:** two new tools for public Telegram channels, no Telegram account or API key involved. `glim_telegram_search` discovers channels by name or topic (Telegram has no global full-text search - find the channel first). `glim_telegram_get` fetches a channel's live posts with views and reactions, searches the channel's full history via `query`, and returns a post's discussion-thread comments for post refs. Also available as REST `POST /api/v1/telegram/search` and `POST /api/v1/telegram/get`
+
+**Full Changelog**: https://github.com/glim-sh/glim-mcp/compare/v1.2.0...v1.3.0
+
 ## [1.2.0](https://github.com/glim-sh/glim-mcp/compare/v1.1.0...v1.2.0) - 2026-08-07
 
 ### <!-- 1 -->🎉 New Features
