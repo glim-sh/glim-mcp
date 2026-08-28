@@ -1,7 +1,7 @@
 ---
 name: glim
 description: Live data for AI agents - Twitter/X search, Reddit posts and comments, semantic web search, clean page extraction, GitHub repos/code/PRs, Amazon products, YouTube transcripts, public Telegram channels, AI-text detection. One hosted MCP server at glim.sh/mcp. Sign in with OAuth and a prepaid balance, or pay per call with crypto (x402 USDC on Base/Solana, MPP on Tempo). No API keys to provision.
-version: 1.2.0
+version: 1.3.0
 homepage: https://glim.sh
 metadata:
   openclaw:
@@ -83,7 +83,7 @@ Fund the address shown by `wallet info` with USDC on Base or Solana. Tool calls 
 - Twitter search supports advanced operators (`from:`, `since:`, `min_faves:`, ...). The server exposes a `docs://search-operators` MCP resource with the full reference.
 - Large `glim_web_fetch` pages are truncated inline with a `download_full_url` link to the complete extraction.
 - Telegram has no global full-text search: discover the channel with `glim_telegram_search`, then `glim_telegram_get(ref, query=...)` searches that channel's full history. A post ref (`t.me/<channel>/<id>`) returns its discussion comments where the channel exposes them; public channels only.
-- `glim_detect_ai` is priced by length: $0.06 per 1,000 words on `tier: "standard"`, per 100 words on `tier: "premium"` (rounded up, minimum $0.06). The exact amount for a given text comes back in its payment challenge.
+- `glim_detect_ai` is priced by length: $0.06 per 100 words, rounded up, minimum $0.06. The exact amount for a given text comes back in its payment challenge.
 - Per-tool pricing is also exposed as the `docs://pricing` MCP resource.
 
 ## REST API

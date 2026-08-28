@@ -10,7 +10,7 @@
 ## [1.2.0](https://github.com/glim-sh/glim-mcp/compare/v1.1.0...v1.2.0) - 2026-08-07
 
 ### <!-- 1 -->🎉 New Features
-- **detect:** new `glim_detect_ai` tool - score any text for AI authorship. Returns an overall verdict (AI / human / mixed) with confidence, AI/human/AI-assisted fractions, and a segment-by-segment breakdown showing exactly which parts read as AI-written. Use it to verify third-party content, or to check a draft before publishing and revise the flagged segments. `tier=premium` uses the highest-accuracy detection class and additionally flags humanized text (AI output run through paraphrasing tools). Priced by length: $0.06 per 1,000 words standard / per 100 words premium (rounded up, minimum $0.06); texts under ~100 words automatically run on the premium detector at the standard price. Also available as REST `POST /api/v1/detect/ai`
+- **detect:** new `glim_detect_ai` tool - score any text for AI authorship. Returns an overall verdict (AI / human / mixed) with confidence, AI/human/AI-assisted fractions, and a segment-by-segment breakdown showing exactly which parts read as AI-written. Use it to verify third-party content, or to check a draft before publishing and revise the flagged segments. Every call runs the highest-accuracy detection class and flags humanized text (AI output run through paraphrasing tools) per segment. Priced by length: $0.06 per 100 words, rounded up, minimum $0.06; max input 20,000 characters. Also available as REST `POST /api/v1/detect/ai`
 
 **Full Changelog**: https://github.com/glim-sh/glim-mcp/compare/v1.1.0...v1.2.0
 
