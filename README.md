@@ -8,6 +8,8 @@ One remote MCP endpoint gives your agent live data from Twitter/X, Reddit, the o
 https://glim.sh/mcp
 ```
 
+[![glim.sh MCP connector](https://glama.ai/mcp/connectors/sh.glim/glim/badges/score.svg)](https://glama.ai/mcp/connectors/sh.glim/glim)
+
 ---
 
 ## Quick Start
