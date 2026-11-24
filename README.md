@@ -2,7 +2,7 @@
 
 ### Live data for any agent.
 
-One remote MCP endpoint gives your agent live data from Twitter/X, Reddit, the open web, GitHub, Amazon, YouTube, and public Telegram channels, plus AI-text detection. No API keys, no scraping stack - connect the URL and pay per call.
+One remote MCP endpoint gives your agent live data from Twitter/X, Reddit, the open web, GitHub, Amazon, YouTube, and public Telegram channels. No API keys, no scraping stack - connect the URL and pay per call.
 
 ```
 https://glim.sh/mcp
@@ -48,26 +48,27 @@ Any other MCP client: add the endpoint to your config.
 }
 ```
 
-On first use the client runs a browser OAuth sign-in. Manage your balance at [glim.sh/app](https://glim.sh/app). The wallet path needs no account at all: calls auto-pay USDC (Base or Solana) on x402 challenges; MPP on Tempo is accepted on the same endpoint.
+On first use the client runs a browser OAuth sign-in, and calls are billed against a prepaid balance you top up at [glim.sh/app](https://glim.sh/app). The wallet path needs no account at all: calls auto-pay USDC (Base or Solana) on x402 challenges; MPP on Tempo is accepted on the same endpoint.
 
 ## Tools
 
-| Tool | Price | Use for |
+| Tool | Price per call | Use for |
 | --- | --- | --- |
 | `glim_twitter_search` | $0.005 | Search tweets with advanced operators |
 | `glim_twitter_get` | $0.005 | Tweet with thread context, or user profile, by URL/id/handle |
 | `glim_reddit_search` | $0.01 | Search Reddit posts |
-| `glim_reddit_get` | $0.015 | Post + comments, subreddit feed, or user activity |
+| `glim_reddit_get` | $0.005 | Post + comments, subreddit feed, or user activity |
 | `glim_web_search` | $0.01 | Semantic web search |
 | `glim_web_fetch` | $0.002 | Clean page extraction (SSR, SPA shells, PDFs) |
-| `glim_github_search` | $0.002 | Search GitHub repos, conversations, or code |
+| `glim_github_search` | $0.002 | Search GitHub repos, issues and PRs, discussions, or code |
 | `glim_github_get` | $0.002 | Repo metadata, files, history, PRs, issues |
 | `glim_amazon_search` | $0.005 | Search Amazon listings with prices, ratings, ASINs |
-| `glim_amazon_get` | $0.01 | Amazon product detail by ASIN |
-| `glim_youtube_get` | $0.01 | YouTube subtitles/transcript by video id |
+| `glim_amazon_get` | $0.01 | Amazon product detail by product URL (MCP) or ASIN (REST) |
+| `glim_youtube_get` | $0.01 | YouTube transcript with timestamps by video URL or id |
 | `glim_telegram_search` | $0.01 | Discover public Telegram channels by name or topic |
 | `glim_telegram_get` | $0.005 | Channel posts, in-channel history search, or post + discussion comments |
-| `glim_detect_ai` | from $0.06 | Score text for AI authorship, with a per-segment breakdown |
+
+All 13 tools are read-only. No subscription and no minimum.
 
 Restrict the tool list per session with `?tools=`:
 
@@ -77,7 +78,7 @@ https://glim.sh/mcp?tools=glim_twitter_search,glim_web_fetch
 
 ## REST API
 
-Every tool is also a plain REST endpoint under `https://glim.sh/api/v1/`, gated by the same payment challenges. Full spec: [glim.sh/openapi.json](https://glim.sh/openapi.json).
+Every tool is also a plain REST endpoint under `https://glim.sh/api/v1/`, at the same prices. Pay per call from a wallet through the same payment challenges, or send a glim.sh API key from [glim.sh/app](https://glim.sh/app) as an `x-api-key` header (or `Authorization: Bearer`). Full spec: [glim.sh/openapi.json](https://glim.sh/openapi.json).
 
 ```bash
 npx x402-proxy https://glim.sh/api/v1/twitter/get/cascade_fyi
