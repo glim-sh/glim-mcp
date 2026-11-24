@@ -1,6 +1,6 @@
 ---
 name: glim
-description: Live data for AI agents - Twitter/X search, Reddit posts and comments, semantic web search, clean page extraction, GitHub repos/code/PRs, Amazon products, YouTube transcripts, public Telegram channels. One hosted MCP server at glim.sh/mcp. Sign in with OAuth and a prepaid balance, or pay per call with crypto (x402 USDC on Base/Solana, MPP on Tempo). No API keys to provision.
+description: Live data for AI agents - Twitter/X search, Reddit posts and comments, semantic web search, clean page extraction, GitHub repos/code/PRs, Amazon products, YouTube transcripts, public Telegram channels. One hosted MCP server at glim.sh/mcp. Sign in with OAuth and a prepaid balance, or pay per call with crypto (x402 USDC on Base/Solana/Monad, MPP USDC.e on Tempo). No API keys to provision.
 version: 1.3.0
 homepage: https://glim.sh
 metadata:
@@ -47,7 +47,7 @@ https://glim.sh/mcp?tools=glim_twitter_search,glim_web_fetch
 
 ## Headless fallback: pay per call with a crypto wallet
 
-No browser or account needed. Calls are paid from a local wallet via the x402 protocol (USDC on Base or Solana):
+No browser or account needed. Calls are paid from a local wallet via the x402 protocol (USDC on Base, Solana or Monad):
 
 ```bash
 npx x402-proxy setup                              # one-time: generate or import a wallet
@@ -55,7 +55,7 @@ npx x402-proxy wallet info                        # show address + USDC balance
 npx x402-proxy mcp add glim https://glim.sh/mcp   # register glim in your MCP client behind a paying proxy
 ```
 
-Fund the address shown by `wallet info` with USDC on Base or Solana. Tool calls then auto-pay on HTTP 402 challenges. MPP (Tempo) is also accepted on the same endpoint.
+Fund the address shown by `wallet info` with USDC on Base, Solana or Monad. Tool calls then auto-pay on HTTP 402 challenges. MPP (USDC.e on Tempo) is also accepted on the same endpoint.
 
 ## Tools
 
