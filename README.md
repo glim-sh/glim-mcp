@@ -50,7 +50,7 @@ Any other MCP client: add the endpoint to your config.
 }
 ```
 
-On first use the client runs a browser OAuth sign-in, and calls are billed against a prepaid balance you top up at [glim.sh/app](https://glim.sh/app). The wallet path needs no account at all: calls auto-pay USDC (Base or Solana) on x402 challenges; MPP on Tempo is accepted on the same endpoint.
+On first use the client runs a browser OAuth sign-in, and calls are billed against a prepaid balance you top up at [glim.sh/app](https://glim.sh/app). The wallet path needs no account at all: calls auto-pay USDC (Base, Solana or Monad) on x402 challenges; MPP with USDC.e on Tempo is accepted on the same endpoint.
 
 ## Tools
 
